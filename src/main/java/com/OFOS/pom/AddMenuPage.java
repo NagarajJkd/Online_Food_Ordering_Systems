@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.OFOS.generic.ExcellUtility;
+import com.OFOS.generic.WebDriverUtility;
+
 public class AddMenuPage {
 
 	
@@ -76,5 +79,11 @@ public class AddMenuPage {
 		price.sendKeys(Amount);
 	}
 	
+	
+	public void setvaluesA(WebDriverUtility wlib, ExcellUtility elib, WebDriver driver) throws Throwable {
+		
+		dishName.sendKeys(elib.readDataFromExcell("addmenu", 0, 1));
+		
+	}
 
 }
